@@ -1,0 +1,77 @@
+
+  body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .formMensaje {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 20vh;
+    padding: 20px 50px 50px 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(246,247,249);
+  }
+
+  .formLista{
+    max-width: 25%;
+    margin: 0 auto;
+  }
+
+  button {
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    background: rgb(28,44,101);
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    text-decoration: underline;
+  }
+
+  .titulo{
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+ 
+  .botonPrincipal {
+    margin: 0 auto;
+    width: 30%;
+  }
+
+  label {
+    display: block;
+    margin: 5px;
+    letter-spacing: 1.2px;
+  }
+
+  input, textarea {
+    letter-spacing: 1.8px;
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  } 
+
+  textarea{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 150px;
+  }
+
