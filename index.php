@@ -15,7 +15,7 @@
 
 <div class="botonPrincipal">
     <button class = "button1"> 
-        <a href= "formulario.php">Ir a Formulario</a>
+        <a href= "formulario.php">Enviar Mensaje</a>
     </button>
 
     <button class = "button2"> 
