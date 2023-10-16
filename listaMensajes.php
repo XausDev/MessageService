@@ -8,25 +8,34 @@
     
 </head>
 <body>
-    <?php
-        $directorioMensajes = "Mensajes";
-        $carpetas = array_filter(glob($directorioMensajes."/*"),"is_dir");
-    ?>
 
-    <div class="titulo"><h1>Listado de Destinatarios</h1></div>
 
-    <?php foreach($carpetas as $carpeta): ?>
+    <div class ="fondo">
 
-        <form class="formLista" action="verMensajes.php" method="POST">
-            <button name="carpeta" value="<?php echo $carpeta; ?>">
-                <?php echo basename($carpeta); ?> 
-            </button>
-        </form>
+        <div class="titulo"><h1>Listado de Destinatarios</h1></div>
+        
+        <?php
+            $directorioMensajes = "Mensajes";
+            $carpetas = array_filter(glob($directorioMensajes."/*"),"is_dir");
 
-    <?php endforeach; ?>
+        if(empty($carpetas)) {  ?>
+                <h3><?php echo "No hay chats activos";?></h3>
+        <?php
+        } else {
+                
+            foreach($carpetas as $carpeta): ?>
 
-    
+            <form class="formLista" action="verMensajes.php" method="POST">
+                <button name="carpeta" value="<?php echo $carpeta; ?>">
+                    <?php echo basename($carpeta); ?> 
+                </button>
+            </form>
+                <?php endforeach; 
+        } 
+        ?>
+        
+        <div class = "volver"><a href="index.php">Volver al Inicio</a></div>
 
-    
+    </div>
 
 </body>

@@ -9,7 +9,7 @@
     
 </head>
 <body>
-    <form class="formMensaje" name='Formulario' action='server.php' method='post'>
+    <form class="fondo" name='Formulario' action='server.php' method='post'>
     <div><h2>Envia tu mensaje</h2></div>
         <div>
             <label for="to">Para:</label>

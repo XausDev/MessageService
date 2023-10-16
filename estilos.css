@@ -3,7 +3,7 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  .formMensaje {
+  .fondo {
     max-width: 50%;
     margin: 0 auto;
     margin-top: 20vh;
@@ -36,9 +36,9 @@
   }
 
   .titulo{
-    max-width: 50%;
+    max-width: 80%;
     margin: 0 auto;
-    padding: 50px;
+    /* padding: 50px; */
     text-align: center;
   }
 
@@ -49,6 +49,16 @@
 
   a:hover {
     text-decoration: underline;
+  }
+
+  .volver{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 105px;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 5px;
+    color: rgb(246,247,249);
+    background-color:  rgb(28,44,101);
   }
  
   .botonPrincipal {

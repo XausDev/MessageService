@@ -10,18 +10,18 @@
 <body>
 <?php
 
-$carpeta = $_POST["carpeta"];
+    $carpeta = $_POST["carpeta"];
 
-$ficheros = scandir($carpeta);//Devuelve un array con todos los ficheros y carpetas que se encuentran dentro del directorio
+    $ficheros = scandir($carpeta);//Devuelve un array con todos los ficheros y carpetas que se encuentran dentro del directorio
 
-foreach ($ficheros as $fichero):
-    $contenido = fopen("$carpeta/$fichero","r");
-    while(!feof($contenido)){ //Para salir del bucle usamos feof, indica cuando se ha acabado el fichero
-        echo fgets($contenido); //Obtenemos linea a linea
-        echo "</br>";
-    }
-    fclose ($contenido);
-endforeach;
+    foreach ($ficheros as $fichero):
+        $contenido = fopen("$carpeta/$fichero","r");
+        while(!feof($contenido)){ //Para salir del bucle usamos feof, indica cuando se ha acabado el fichero
+            echo fgets($contenido); //Obtenemos linea a linea
+            echo "</br>";
+        }
+        fclose ($contenido);
+    endforeach;
     
 ?>
 </body>
