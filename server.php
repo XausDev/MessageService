@@ -46,12 +46,12 @@ if(!validateEmpty($to, $subject, $content)){
     exit;
 }else{
     echo "El mensaje se ha enviado correctamente. ";
-    if(!file_exists(".\Mensajes".'\\'.$to)){
-        mkdir(".\Mensajes\\".$to);
+    if(!file_exists("Mensajes".'\\'.$to)){
+        mkdir("Mensajes\\".$to);
     }
 }
 
-$folder = ".\Mensajes".'\\'.$to; 
+$folder = "Mensajes".'\\'.$to;
 
 $filename = $folder.'\\'.$to . '_' . date('d-m-Y_H:i:s') . '.txt'; 
 
