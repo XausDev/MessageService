@@ -2,7 +2,7 @@
 
 /* EN MAC ----------------------- */
 
-/* include("validationFunc.inc.php");
+/*include("validationFunc.inc.php");
 
 $to = $_POST['to'];
 $subject = $_POST['subject'];
@@ -31,7 +31,7 @@ fclose($file);
  
 echo "Mensaje guardado en: " . $filename;
 
-header("Location: index.php"); */
+header("Location: index.php");*/
 
 /* EN WINDOWS ----------------------- */
 
@@ -45,15 +45,22 @@ if(!validateEmpty($to, $subject, $content)){
     echo "Todos los campos son obligatorios";
     exit;
 }else{
-    echo "El mensaje se ha enviado correctamente. ";
-    if(!file_exists("Mensajes".'\\'.$to)){
-        mkdir("Mensajes\\".$to);
+    if(!file_exists("Mensajes".DIRECTORY_SEPARATOR.$to)){
+        mkdir("Mensajes".DIRECTORY_SEPARATOR);
+        mkdir("Mensajes".DIRECTORY_SEPARATOR.$to);
     }
+    echo "El mensaje se ha enviado correctamente. ";
 }
 
-$folder = "Mensajes".'\\'.$to;
+$directorio = getcwd();
 
-$filename = $folder.'\\'.$to . '_' . date('d-m-Y_H:i:s') . '.txt'; 
+$folder = "Mensajes".DIRECTORY_SEPARATOR.$to;
+
+$filename = $directorio.DIRECTORY_SEPARATOR.$folder.DIRECTORY_SEPARATOR.$to . '_' . date('d-m-Y_H:i:s') . '.txt';
+
+echo "Directorio ".$directorio."----";
+echo "Folder ".$folder."-----";
+echo "Filename ".$filename."------";
 
 $file = fopen($filename, 'w') or die ("Fichero no encontrado");
 
