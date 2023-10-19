@@ -85,3 +85,10 @@
     padding-bottom: 150px;
   }
 
+  .mensajesChat{
+    background-color: aqua;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
