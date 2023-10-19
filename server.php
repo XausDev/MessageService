@@ -2,7 +2,8 @@
 
 /* EN MAC ----------------------- */
 
-/*include("validationFunc.inc.php");
+
+include("validationFunc.inc.php");
 
 $to = $_POST['to'];
 $subject = $_POST['subject'];
@@ -31,9 +32,10 @@ fclose($file);
  
 echo "Mensaje guardado en: " . $filename;
 
-header("Location: index.php");*/
+header("Location: index.php");
 
-/* EN WINDOWS ----------------------- */
+
+/* EN WINDOWS -----------------------
 
 include("validationFunc.inc.php");
 
@@ -71,4 +73,4 @@ fclose($file);
  
 echo "Mensaje guardado en: " . $filename;
 
-header("Location: index.php");
+header("Location: index.php");*/

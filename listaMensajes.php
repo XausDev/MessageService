@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Práctica UF1 M06</title>
+    <title>Listado Mensajes</title>
     
 </head>
 <body>
 
+    <?php //Si existe la variable de SESSION "carpeta_seleccionada" mostrará esta
+    session_start();
+    if(isset($_SESSION['carpeta_seleccionada'])){
+        $carpeta = $_SESSION['carpeta_seleccionada'];
+        header("Location: verMensajes.php?id={$_POST["carpeta_selecionada"]}");//Vamos a la pagina "verMensajes" con la carpeta seleccionada
+        exit;
+    }
+    ?>
 
     <div class ="fondo">
 
@@ -30,7 +38,7 @@
                     <?php echo basename($carpeta); ?> 
                 </button>
             </form>
-                <?php endforeach; 
+        <?php endforeach; 
         } 
         ?>
         
