@@ -12,9 +12,9 @@
     <?php //Si existe la variable de SESSION "carpeta_seleccionada" mostrará esta
     session_start();
     if(isset($_SESSION['carpeta_seleccionada'])){
-        $carpeta = $_SESSION['carpeta_seleccionada'];
-        header("Location: verMensajes.php?id={$_POST["carpeta_selecionada"]}");//Vamos a la pagina "verMensajes" con la carpeta seleccionada
-        exit;
+        //$carpeta = $_SESSION['carpeta_seleccionada'];
+        //header("Location: verMensajes.php?id={$_POST["carpeta_selecionada"]}");//Vamos a la pagina "verMensajes" con la carpeta seleccionada
+        //exit;
     }
     ?>
 
