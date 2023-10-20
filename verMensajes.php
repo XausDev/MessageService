@@ -40,8 +40,29 @@
             <?php
             endforeach;
         ?>
+        <form method='post'>
+            <input class = "volver" type='submit' name='volverIndex' value = 'Volver al Inicio'></input>
+            <input class = "volver" type='submit' name='volverLista' value = 'Volver al Listado'></input>
+        </form>
 
-    <div class = "volver"><a href="listaMensajes.php">Volver al Listado</a></div>
+        <?php
+
+        $volverIndex = $_POST['volverIndex'];
+        $volverLista = $_POST['volverLista'];
+
+        if(isset($volverIndex)){ ?>
+            <a href="index.php">Volver al Inicio</a>
+        <?php
+        }
+
+        if(isset ($volverLista)){?>
+            <a href="listaMensajes.php">Volver al Listado</a>
+            <?php
+            session_unset(); //Borrar variables
+            session_destroy(); //Borrar sesion
+        }
+
+        ?>
 
     </div>
 
