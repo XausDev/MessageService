@@ -91,11 +91,21 @@
     width: 70%;
     margin: 0 auto;
     border-radius: 3px;
-    padding: 15px 10px 30px 30px;
+    padding: 15px 30px 30px 30px;
     margin-bottom: 20px;
   }
 
   .fechaChat{
     color: rgba(246, 247, 249, 0.718);
     margin-left: 75%;
+  }
+
+  .volverChat{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 150px;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 5px;
+    color: rgb(246,247,249);
+    background-color:  rgb(28,44,101);
   }

@@ -24,7 +24,9 @@ $filename = $folder.'/'.$to . '_' . date('d-m-Y_H:i:s') . '.txt';
 $file = fopen($filename, 'w') or die ("Fichero no encontrado");
 
 fwrite($file, "Para: " . $to . "\n");  
+fwrite($file, "  "."\n");  
 fwrite($file, "Asunto: " . $subject . "\n");
+fwrite($file, "  "."\n");  
 fwrite($file, "Contenido: " . $content);
 fclose($file);
 
